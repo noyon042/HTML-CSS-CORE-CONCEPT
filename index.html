@@ -1,71 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:ital,wght@1,700&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .text{
-            /* text-align: center; */
-        }
-        footer{
-            height: 12vh;
-            background-color: rgb(55, 43, 226);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Open Sans';
-        }
-        header{
-            
-            background-color: black;
-            border: 2px solid red;
-        }
-        nav ul{
-            height: 58px;
-            display:flex;
-            justify-content:flex-start;
-            align-items: center;
-        }
-        nav ul li{
-            list-style: none;
-            padding: 0 15px;
-        }
-        nav ul li a{
-            color: white;
-            text-decoration: none;
-            font-family: 'Open Sans';
-          
-        }
-    </style>
+  <head>
+  <link rel="stylesheet" href="./css/responsive.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online shopping for cricket, football and phone items</title>
    
-</head>
-<body>
-    
+    <style>
+      
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:ital,wght@1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .text {
+        /* text-align: center; */
+      }
+      footer {
+        height: 12vh;
+        background-color: rgb(55, 43, 226);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Open Sans";
+      }
+      header {
+        background-color: rgb(232, 125, 53);
+        border: 2px solid red;
+      }
+      nav {
+        display: flex;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 88px;
+        padding: 0 25px;
+      }
+      nav ul {
+        height: 58px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      nav ul li {
+        list-style: none;
+        padding: 0 23px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      nav ul li::after {
+        content: "";
+        height: 2px;
+        background: #8142f5;
+        display: block;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        transition: all 0.5s ease-in-out;
+      }
+
+      nav ul li:hover::after {
+        width: 100%;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+      }
+      .search input {
+        width: 30vw;
+        height: 27px;
+        border-radius: 5px;
+        margin: 0 16px 0 56px;
+        padding: 0 12px;
+      }
+      .btn {
+        padding: 5px 10px;
+        color: white;
+        background-color: blue;
+        border: 2px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.6s ease-in-out;
+        font-weight: 700;
+      }
+      .btn:hover {
+        background: rgb(0, 255, 179);
+        color: black;
+        font-weight: 700;
+      }
+      .container {
+        min-height: calc(100vh - 58px - 12vh);
+      }
+
+      .slider {
+       
+        width: 80vw;
+        margin: 12px auto;
+        overflow: hidden;
+        /* align-items: center; */
+      }
+      .card {
+        max-width: 91vw;
+        margin:37px auto;
+      }
+      .cards {
+        display: inline-flex;
+overflow: hidden;
+        align-items: center;
+      }
+      .card-item {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 15px;
+      }
+      .card h2 {
+        font-family: "Open Sans";
+      }
+      .my-1 {
+        margin: 5px 0;
+      }
+      .my-2 {
+        margin: 26px 0;
+      }
+      .text center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
-    </ul>
-</nav>
+      <nav>
+        <div class="logo">
+          <img src="flip.svg" alt="" />
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Enter keyword to search...."
+            name=""
+            id=""
+          />
+          <button class="btn">Search</button>
+        </div>
+      </nav>
     </header>
     <main>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempore facilis animi a vitae expedita, voluptatum omnis dignissimos numquam esse quidem aperiam totam?
+      <div class="container">
+        <div class="slider">
+          <img src="https://source.unsplash.com/random/1200x500?sig=1" alt="" />
+        </div>
+     
+       
+        <div class="card">
+          <h2 class="my-2">Join the cricket fun</h2>
+          <div class="cards">
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,jersey"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,shoe"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,shoe"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,shoe"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,glovs"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,bat"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,ball"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img
+                src="https://source.unsplash.com/random/160x160?cricket,stamp"
+                alt=""
+              />
+           
+              <div class="lines">
+                <p class="text center my-1">Cricket</p>
+                <p class="text center my-1">Min 20% off</p>
+                <p class="text center my-1">Grab Now</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="card">
+            <h2 class="my-2">Join the football fun</h2>
+            <div class="cards">
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,jersey"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,jersey"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,jersey"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,shoe"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,marker"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,goal kepping"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,pad"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              <div class="card-item">
+                <img
+                  src="https://source.unsplash.com/random/160x160?football,ball"
+                  alt=""
+                />
+             
+                <div class="lines">
+                  <p class="text center my-1">Football items</p>
+                  <p class="text center my-1">Min 20% off</p>
+                  <p class="text center my-1">Grab Now</p>
+                </div>
+              </div>
+              </div>
+            </div>
+            <hr>
+            <div class="card">
+              <h2 class="my-2">Join the Mobile Phn club</h2>
+              <div class="cards">
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,samsung"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,samsung"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,samsung"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,redmi"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,showmi"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,iphone"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,nokia"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <img
+                    src="https://source.unsplash.com/random/160x160?mobile,walton"
+                    alt=""
+                  />
+               
+                  <div class="lines">
+                    <p class="text center my-1">Mobile</p>
+                    <p class="text center my-1">Min 20% off</p>
+                    <p class="text center my-1">Grab Now</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+      </div>
     </main>
     <footer>
-       <p class="text"> copyright &copy textcenter.com</p>
+      <p class="text">copyright &copy textcenter.com</p>
     </footer>
-    <footer>
+    <!-- <footer>
        <p class="text"> copyright &copy textcenter.com</p>
-    </footer>
-</body>
+    </footer> -->
+  </body>
 </html>
